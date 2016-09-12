@@ -30,7 +30,7 @@ usemin         | 替换html的引用 如果有filerev后的文件则优先使用
 ## 自定义插件
 
 1. 引入html
-主要功能：主要用于公共部分的html引入。例如header和sidebar。
+主要功能：主要用于公共部分的html引入。例如header和sidebar。<br/>
 小解：
 ```
 grunt.file.recuse(rootdir, callback)           // 递归遍历整个目录，对每个文件都执行 callback 函数。
