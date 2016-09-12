@@ -35,9 +35,9 @@ usemin         | 替换html的引用 如果有filerev后的文件则优先使用
 ```
 grunt.file.recuse(rootdir, callback)           // 递归遍历整个目录，对每个文件都执行 callback 函数。
 
-grunt.file.read(filepath [,options])           // 读取并返回文件的内容。返回值为一个字符串，如果                            options.encoding 为 null ，则返回一个 Buffer。
+grunt.file.read(filepath [,options])           // 读取并返回文件的内容。返回值为一个字符串，如果options.encoding 为 null ，则返回一个 Buffer。
 
-grunt.file.write(filepath, content [,options]) // 将指定的内容写入文件中，如果需要，将创建文件路径中所有不存在的目录。字符串将按照指定的字符编码进行编码，Buffers 将会按照指定的方式写入磁盘。
+grunt.file.write(filepath, content [,options]) // 将指定的内容写入文件中，如果需要，将创建文件路径中所有不存在的目录。字符串将按照指定的字符编码进行编码，Buffers将会按照指定的方式写入磁盘。
 ```
 ```
 grunt.registerTask('htmlpack', function () {
