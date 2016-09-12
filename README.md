@@ -27,3 +27,44 @@ Contrib-cssmin | 压缩css代码
 filerev        | 给文件增加md5的后缀名（重命名文件）类似于增加时间戳
 usemin         | 替换html的引用 如果有filerev后的文件则优先使用
 
+## 自定义插件
+
+1. 合并html
+```
+grunt.registerTask('htmlpack', function () {
+        var dir = 'view/';      //源文件的路径
+        var destDir = 'html';   //要保存的路径
+        var fs = grunt.file;
+        var srcArr = [];
+
+        // 读取源文件
+        fs.recurse(dir, function (filename) {
+
+            var file = fs.read(filename);
+            //console.log(filename);
+            var include = file.match(/<!--\<include.+?\/\>-->/g);
+            var files = file;
+
+            // 替换内容
+            if (include) {
+
+                include.forEach(function (item) {
+
+                    var src = item.replace('<!--<include src="../', '').replace('" />-->', '');
+                    srcArr.push(src);
+
+                    if (srcArr) {
+                        for (var i = 0; i < srcArr.length; i++) {
+                            var html = fs.read(src);
+                            files = files.replace(item, html);
+                        }
+                    }
+
+                });
+            }
+            // 输出文件
+            fs.write(destDir + '/' + filename, files);
+        })
+    });
+    
+
