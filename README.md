@@ -1,8 +1,8 @@
 # ex-forgrunt
 学习grunt并实际应用。
 
-[grunt中文网](http://www.gruntjs.net/)http://www.gruntjs.net/
-[傻瓜教程](http://developer.51cto.com/art/201506/479127_2.htm)http://developer.51cto.com/art/201506/479127_2.htm
+1. [grunt中文网](http://www.gruntjs.net/)http://www.gruntjs.net/
+2. [傻瓜教程](http://developer.51cto.com/art/201506/479127_2.htm)http://developer.51cto.com/art/201506/479127_2.htm
 
 ## grunt插件
 
