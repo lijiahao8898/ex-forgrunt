@@ -14,19 +14,8 @@
 
 * grunt常用的插件：
 
-1. Contrib-jshint —— javascript语法错误检查；
-2. Contrib-watch  —— 实时监控文件变化、调用相应的任务重新执行；
-3. Contrib-clean  —— 清空文件、文件夹
-4. Contrib-uglify —— 压缩javascript代码
-5. Contrib-copy   —— 复制文件、文件夹
-6. Contrib-concat —— 合并多个文件的代码到一个文件中
-7. karma          —— 前端自动化测试工具
-8. Contrib-cssmin —— 压缩css代码
-9. filerev        —— 给文件增加md5的后缀名（重命名文件）类似于增加时间戳
-10. usemin        —— 替换html的引用 如果有filerev后的文件则优先使用
-
-  表头         | 表头
-  -------------| -------------
+  插件名       | 功能
+---------------| ---------------
 Contrib-jshint | javascript语法错误检查；
 Contrib-watch  | 实时监控文件变化、调用相应的任务重新执行；
 Contrib-clean  | 清空文件、文件夹
