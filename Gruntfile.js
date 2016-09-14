@@ -63,8 +63,8 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         //相对路径
-                        cwd: 'style/',
-                        src: ['*.css', '!*.min.css'],
+                        cwd: 'html/style/',
+                        src: ['*.debug.css', '!*.min.css'],
                         dest: '<%= distPath %>/style',
                         ext: '.css'
                     }
@@ -84,7 +84,7 @@ module.exports = function (grunt) {
                 dest: 'html/src/fn/'
             },
             css: {
-                src: ['html/style/*.css'],
+                src: ['html/style/*.css','!html/style/*.debug.css'],
                 dest: 'html/style'
             }
         },
@@ -103,7 +103,7 @@ module.exports = function (grunt) {
             options: {
                 separator: '\n'
             },
-            main: {
+            js: {
                 files:{
                     '<%= distPath %>/src/fn/boss_add_menu.debug.js': [
                         'src/fn/common/boss_common.js',
@@ -159,7 +159,19 @@ module.exports = function (grunt) {
                         'src/fn/common/boss_common.js',
                         'src/fn/common/boss_handle.js',
                         'src/fn/boss_version_list.js'
-                    ],
+                    ]
+                }
+            },
+            css:{
+                files:{
+                    '<%= distPath %>/style/common.debug.css': [
+                        'style/common.css',
+                        'style/header.css',
+                        'style/sidebar.css',
+                        'style/container.css',
+                        'style/cxcalendar.css',
+                        'style/pagination.css'
+                    ]
                 }
             }
         }
